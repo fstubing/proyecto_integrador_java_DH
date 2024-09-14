@@ -34,9 +34,10 @@ public class WebSecurity {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authz) -> authz
-                        .requestMatchers(antMatcher(HttpMethod.POST, "/pacientes")).hasRole("ADMIN")
                         .requestMatchers("/index.html").permitAll()
-                        .requestMatchers("/odontologo.html").permitAll()
+                        .requestMatchers("/odontologo.html").hasRole("ADMIN")
+                        .requestMatchers("/paciente.html").hasRole("ADMIN")
+                        .requestMatchers("/turno.html").hasRole("USER")
                         .anyRequest().authenticated()
                 )
 

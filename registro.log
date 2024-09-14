@@ -23,3 +23,122 @@
 [2024-09-12 23:09:34] [ INFO ] [DatosIniciales:34] usuario cargado con exito
 [2024-09-12 23:10:31] [ INFO ] [DatosIniciales:34] usuario cargado con exito
 [2024-09-12 23:29:08] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-13 17:13:36] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-13 17:14:19] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-13 22:11:22] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-13 22:11:22] [ INFO ] [OdontologoController:31] Listando todos los turnos
+[2024-09-13 22:11:47] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-14 00:06:17] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-14 00:07:12] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:09:07] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-14 00:09:33] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:09:45] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:25:53] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-14 00:26:25] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:26:42] [ INFO ] [OdontologoController:41] Guardando odontólgo
+[2024-09-14 00:26:46] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:27:50] [ INFO ] [OdontologoController:48] Eliminando odontólogo
+[2024-09-14 00:27:52] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:28:07] [ INFO ] [OdontologoController:41] Guardando odontólgo
+[2024-09-14 00:28:12] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:36:14] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-14 00:36:24] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:36:35] [ INFO ] [OdontologoController:41] Guardando odontólgo
+[2024-09-14 00:36:37] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:37:36] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:37:41] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:38:37] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:47:14] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-14 00:47:49] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:48:03] [ INFO ] [OdontologoController:41] Guardando odontólgo
+[2024-09-14 00:48:05] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:48:18] [ INFO ] [OdontologoController:55] Modificando odontólogo
+[2024-09-14 00:48:19] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:48:48] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 00:57:06] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-14 00:59:12] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-14 01:02:15] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-14 01:04:10] [ INFO ] [DatosIniciales:34] usuario cargado con exito
+[2024-09-14 01:04:23] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:09:12] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 01:10:13] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:17:48] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 01:18:06] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:34:25] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 01:34:38] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:35:57] [ INFO ] [OdontologoController:43] Guardando paciente
+[2024-09-14 01:36:00] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:44:50] [ INFO ] [OdontologoController:49] Eliminando paciente
+[2024-09-14 01:44:52] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:45:07] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 01:46:07] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 01:46:34] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:47:07] [ INFO ] [OdontologoController:43] Guardando paciente
+[2024-09-14 01:47:09] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:49:48] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 01:50:01] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:51:26] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 01:51:47] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:51:55] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:52:21] [ INFO ] [OdontologoController:56] Modificando paciente
+[2024-09-14 01:52:22] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:52:31] [ INFO ] [OdontologoController:49] Eliminando paciente
+[2024-09-14 01:52:32] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:52:39] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 01:56:26] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 01:56:31] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 01:56:36] [ INFO ] [OdontologoController:48] Eliminando odontólogo
+[2024-09-14 01:56:37] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 01:56:39] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 01:56:41] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:56:43] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 01:56:43] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 01:56:47] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 02:21:18] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 02:21:49] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 02:21:51] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 02:24:49] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 02:25:21] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 02:25:21] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 02:36:18] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 02:36:36] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 02:36:48] [ INFO ] [OdontologoController:41] Guardando odontólgo
+[2024-09-14 02:36:50] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 02:36:54] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 02:36:54] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 02:37:15] [ INFO ] [OdontologoController:49] Guardando turno
+[2024-09-14 02:37:17] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 02:37:17] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 02:37:56] [ INFO ] [OdontologoController:49] Guardando turno
+[2024-09-14 02:38:24] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 02:38:24] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 02:41:07] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 02:41:08] [ INFO ] [OdontologoController:31] Listando todos los turnos
+[2024-09-14 02:46:14] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 02:46:34] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 02:46:34] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 02:46:53] [ INFO ] [OdontologoController:49] Guardando turno
+[2024-09-14 02:47:00] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 02:47:00] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 02:59:50] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 03:00:20] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 03:00:21] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 03:03:22] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 03:03:49] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 03:03:49] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 03:04:08] [ INFO ] [OdontologoController:49] Guardando turno
+[2024-09-14 03:04:10] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 03:04:10] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 03:04:15] [ INFO ] [OdontologoController:37] Buscando turno por ID
+[2024-09-14 03:16:14] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 03:16:49] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 03:16:54] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 03:19:27] [ INFO ] [DatosIniciales:37] usuario cargado con exito
+[2024-09-14 03:20:06] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 03:20:06] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 03:20:12] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 03:20:12] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 03:20:16] [ INFO ] [OdontologoController:25] Listando todos los pacientes
+[2024-09-14 03:20:16] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 03:20:20] [ INFO ] [OdontologoController:23] Listando todos los odontólogos
+[2024-09-14 03:20:20] [ INFO ] [OdontologoController:25] Listando todos los pacientes

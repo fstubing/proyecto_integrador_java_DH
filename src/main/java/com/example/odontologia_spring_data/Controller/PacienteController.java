@@ -2,6 +2,7 @@ package com.example.odontologia_spring_data.Controller;
 import com.example.odontologia_spring_data.Entity.Paciente;
 import com.example.odontologia_spring_data.Exception.ResourceNotFoundException;
 import com.example.odontologia_spring_data.Service.PacienteService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,40 +16,48 @@ import java.util.List;
 @RequestMapping("/paciente")
 public class PacienteController {
 
+    private static final Logger logger= Logger.getLogger(OdontologoController.class);
     @Autowired
     private PacienteService pacienteService;
 
     @GetMapping
-    public List<Paciente> listarTodos() {
-        return pacienteService.listarTodos();
+    public ResponseEntity<List<Paciente>> listarTodos() {
+        logger.info("Listando todos los pacientes");
+        return ResponseEntity.ok(pacienteService.listarTodos());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Paciente> buscarPorId(@PathVariable Long id) throws ResourceNotFoundException {
+        logger.info("Buscando paciente por ID");
         Paciente paciente = pacienteService.buscarPorId(id);
         if (paciente != null) {
             return ResponseEntity.ok(paciente);
         } else {
+            logger.error("Paciente no encontrado");
             throw new ResourceNotFoundException("Paciente no encontrado");
         }
     }
 
     @PostMapping
-    public Paciente guardar(@RequestBody Paciente paciente) {
-        return pacienteService.guardar(paciente);
+    public ResponseEntity<Paciente> guardar(@RequestBody Paciente paciente) {
+        logger.info("Guardando paciente");
+        return ResponseEntity.ok(pacienteService.guardar(paciente));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+        logger.info("Eliminando paciente");
         pacienteService.eliminar(id);
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Paciente> actualizar(@PathVariable Long id, @RequestBody Paciente pacienteActualizado) {
+        logger.info("Modificando paciente");
         Paciente pacienteExistente = pacienteService.buscarPorId(id);
 
         if (pacienteExistente == null) {
+            logger.error("Error al modificar paciente. Inexistente");
             return ResponseEntity.notFound().build();
         }
 

@@ -6,6 +6,7 @@ import com.example.odontologia_spring_data.Exception.ResourceNotFoundException;
 import com.example.odontologia_spring_data.Service.OdontologoService;
 import com.example.odontologia_spring_data.Service.PacienteService;
 import com.example.odontologia_spring_data.Service.TurnoService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/turno")
 public class TurnoController {
+
+    private static final Logger logger= Logger.getLogger(OdontologoController.class);
     @Autowired
     private TurnoService turnoService;
     @Autowired
@@ -24,42 +27,50 @@ public class TurnoController {
     private OdontologoService odontologoService;
 
     @GetMapping
-    public List<Turno> listarTodos() {
-        return turnoService.listarTodos();
+    public ResponseEntity<List<Turno>> listarTodos() {
+        logger.info("Listando todos los turnos");
+        return ResponseEntity.ok(turnoService.listarTodos());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Turno> buscarPorId(@PathVariable Long id) {
+        logger.info("Buscando turno por ID");
         Turno turno = turnoService.buscarPorId(id);
         if (turno != null) {
             return ResponseEntity.ok(turno);
         } else {
+            logger.error("Error al buscar turno. Inexistente");
             return ResponseEntity.notFound().build();
         }
     }
 
     @PostMapping
     public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) throws ResourceNotFoundException {
+        logger.info("Guardando turno");
         Paciente pacienteBuscado= pacienteService.buscarPorId(turno.getPaciente().getId());
         Odontologo odontologoBuscado= odontologoService.buscarPorId(turno.getOdontologo().getId());
         if(pacienteBuscado!=null&&odontologoBuscado!=null){
             return ResponseEntity.ok(turnoService.guardar(turno)); //si el retorno es correcto , seria un 200
         }else{
+            logger.error("Error al guardar turno");
             throw new ResourceNotFoundException("Paciente y/o Odontólogo no existe");
         }
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+        logger.info("Eliminando turno");
         turnoService.eliminar(id);
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Turno> actualizar(@PathVariable Long id, @RequestBody Turno turnoActualizado) {
+        logger.info("Modificando turno");
         Turno turnoExistente = turnoService.buscarPorId(id);
 
         if (turnoExistente == null) {
+            logger.info("Error al modificar turno. Inexistente");
             return ResponseEntity.notFound().build();
         }
 

@@ -1,16 +1,17 @@
 package com.example.odontologia_spring_data.Security;
 
-import com.example.odontologia_spring_data.Entity.Odontologo;
-import com.example.odontologia_spring_data.Entity.Usuario;
-import com.example.odontologia_spring_data.Entity.UsuarioRole;
+import com.example.odontologia_spring_data.Entity.*;
 import com.example.odontologia_spring_data.Repository.UsuarioRepository;
 import com.example.odontologia_spring_data.Repository.OdontologoRepository;
+import com.example.odontologia_spring_data.Repository.PacienteRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.*;
+
+import java.time.LocalDate;
 
 @Component
 public class DatosIniciales implements ApplicationRunner {
@@ -20,6 +21,8 @@ public class DatosIniciales implements ApplicationRunner {
 
     @Autowired
     private OdontologoRepository odontologoRepository;
+    @Autowired
+    private PacienteRepository pacienteRepository;
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
     @Override
@@ -34,6 +37,8 @@ public class DatosIniciales implements ApplicationRunner {
         logger.info("usuario cargado con exito");
         Odontologo odontologo = new Odontologo("mat1", "fernando", "stubing");
         odontologoRepository.save(odontologo);
+        Paciente paciente= new Paciente("jorgito","Pereyra","1111111", LocalDate.of(2024,9,10),"jorgito@jorgito.com",new Domicilio("Calle 1",12,"La Rioja","La Rioja"));
+        Paciente pacienteGuardado= pacienteRepository.save(paciente);
     }}
 
 

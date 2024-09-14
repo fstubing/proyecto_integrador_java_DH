@@ -19,38 +19,44 @@ public class OdontologoController {
     private OdontologoService odontologoService;
 
     @GetMapping
-    public List<Odontologo> listarTodos() {
-        return odontologoService.listarTodos();
+    public ResponseEntity<List<Odontologo>> listarTodos() {
+        logger.info("Listando todos los odontólogos");
+        return ResponseEntity.ok(odontologoService.listarTodos());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Odontologo> buscarPorId(@PathVariable Long id) throws ResourceNotFoundException{
+        logger.info("Buscando odontólogo por ID");
         Odontologo odontologo = odontologoService.buscarPorId(id);
-        logger.info("y q pasa");
         if (odontologo != null) {
             return ResponseEntity.ok(odontologo);
         } else {
-
+            logger.error("Error al buscar odontólogo por ID");
             throw new ResourceNotFoundException("Odontologo no encontrado");
         }
     }
 
     @PostMapping
-    public Odontologo guardar(@RequestBody Odontologo odontologo) {
-        return odontologoService.guardar(odontologo);
+    public ResponseEntity<Odontologo> guardar(@RequestBody Odontologo odontologo) {
+        logger.info("Guardando odontólgo");
+        Odontologo odontologoGuardado = odontologoService.guardar(odontologo);
+        return ResponseEntity.ok(odontologoGuardado);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+        logger.info("Eliminando odontólogo");
         odontologoService.eliminar(id);
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Odontologo> actualizar(@PathVariable Long id, @RequestBody Odontologo odontologoActualizado) {
+        logger.info("Modificando odontólogo");
         Odontologo odontologoExistente = odontologoService.buscarPorId(id);
 
         if (odontologoExistente == null) {
+            logger.error("Error al modificar odontólogo. Inexistente");
             return ResponseEntity.notFound().build();
         }
 
