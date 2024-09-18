@@ -2,6 +2,7 @@ package com.example.odontologia_spring_data.Controller;
 import com.example.odontologia_spring_data.Entity.Paciente;
 import com.example.odontologia_spring_data.Exception.ResourceNotFoundException;
 import com.example.odontologia_spring_data.Service.PacienteService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,12 +21,14 @@ public class PacienteController {
     @Autowired
     private PacienteService pacienteService;
 
+    @Operation(summary = "Lista todos los pacientes de la base")
     @GetMapping
     public ResponseEntity<List<Paciente>> listarTodos() {
         logger.info("Listando todos los pacientes");
         return ResponseEntity.ok(pacienteService.listarTodos());
     }
 
+    @Operation(summary = "Devuelve un paciente según la Id proporcionada")
     @GetMapping("/{id}")
     public ResponseEntity<Paciente> buscarPorId(@PathVariable Long id) throws ResourceNotFoundException {
         logger.info("Buscando paciente por ID");
@@ -38,12 +41,14 @@ public class PacienteController {
         }
     }
 
+    @Operation(summary = "Registra un paciente en la base")
     @PostMapping
     public ResponseEntity<Paciente> guardar(@RequestBody Paciente paciente) {
         logger.info("Guardando paciente");
         return ResponseEntity.ok(pacienteService.guardar(paciente));
     }
 
+    @Operation(summary = "Borra un paciente de la base según el id proporcionado")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         logger.info("Eliminando paciente");
@@ -51,6 +56,7 @@ public class PacienteController {
         return ResponseEntity.noContent().build();
     }
 
+    @Operation(summary = "Modifica los datos de un paciente")
     @PutMapping("/{id}")
     public ResponseEntity<Paciente> actualizar(@PathVariable Long id, @RequestBody Paciente pacienteActualizado) {
         logger.info("Modificando paciente");

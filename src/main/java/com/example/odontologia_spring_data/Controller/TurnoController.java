@@ -6,6 +6,7 @@ import com.example.odontologia_spring_data.Exception.ResourceNotFoundException;
 import com.example.odontologia_spring_data.Service.OdontologoService;
 import com.example.odontologia_spring_data.Service.PacienteService;
 import com.example.odontologia_spring_data.Service.TurnoService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,12 +27,14 @@ public class TurnoController {
     @Autowired
     private OdontologoService odontologoService;
 
+    @Operation(summary = "Lista todos los turnos de la base")
     @GetMapping
     public ResponseEntity<List<Turno>> listarTodos() {
         logger.info("Listando todos los turnos");
         return ResponseEntity.ok(turnoService.listarTodos());
     }
 
+    @Operation(summary = "Devuelve un turno según la Id proporcionada")
     @GetMapping("/{id}")
     public ResponseEntity<Turno> buscarPorId(@PathVariable Long id) {
         logger.info("Buscando turno por ID");
@@ -44,6 +47,7 @@ public class TurnoController {
         }
     }
 
+    @Operation(summary = "Registra un turno en la base")
     @PostMapping
     public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) throws ResourceNotFoundException {
         logger.info("Guardando turno");
@@ -57,6 +61,7 @@ public class TurnoController {
         }
     }
 
+    @Operation(summary = "Borra un turno de la base según el id proporcionado")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         logger.info("Eliminando turno");
@@ -64,6 +69,7 @@ public class TurnoController {
         return ResponseEntity.noContent().build();
     }
 
+    @Operation(summary = "Modifica los datos de un turno")
     @PutMapping("/{id}")
     public ResponseEntity<Turno> actualizar(@PathVariable Long id, @RequestBody Turno turnoActualizado) {
         logger.info("Modificando turno");
